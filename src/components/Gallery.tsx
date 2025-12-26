@@ -8,7 +8,6 @@ import { generateWorkImages, type WorkImage } from '../utils/imageUtils';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import '../styles/swiper-custom.css';
 
 const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -40,7 +39,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="py-16 bg-gray-800">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Заголовок и подзаголовок */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -52,7 +51,7 @@ const Gallery = () => {
         </div>
 
         {/* Карусель */}
-        <div className="relative">
+        <div className="relative px-12">
           <Swiper
             modules={[Navigation]}
             spaceBetween={20}
@@ -101,14 +100,14 @@ const Gallery = () => {
 
           {/* Кастомные кнопки навигации */}
           <button 
-            className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 -ml-6"
+            className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
             aria-label="Предыдущий слайд"
           >
             <ChevronLeft className="w-6 h-6 text-gray-700" />
           </button>
           
           <button 
-            className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 -mr-6"
+            className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
             aria-label="Следующий слайд"
           >
             <ChevronRight className="w-6 h-6 text-gray-700" />

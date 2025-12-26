@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface LightboxProps {
@@ -10,7 +10,7 @@ interface LightboxProps {
   onPrev: () => void;
 }
 
-const Lightbox: React.FC<LightboxProps> = ({
+const Lightbox = ({
   images,
   currentIndex,
   isOpen,
