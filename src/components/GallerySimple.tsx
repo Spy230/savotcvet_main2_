@@ -7,18 +7,18 @@ import 'swiper/css/pagination';
 
 const GallerySimple = () => {
   const workImages = [
-    '/images/works/attachment.jpeg',
-    '/images/works/attachment (1).jpeg',
-    '/images/works/attachment (2).jpeg',
-    '/images/works/attachment (3).jpeg',
-    '/images/works/attachment (4).jpeg',
-    '/images/works/attachment (5).jpeg',
-    '/images/works/attachment (6).jpeg',
-    '/images/works/attachment (7).jpeg',
-    '/images/works/attachment (8).jpeg',
-    '/images/works/attachment (9).jpeg',
-    '/images/works/attachment (10).jpeg',
-    '/images/works/attachment (11).jpeg',
+    '/images/works/attachment-0.jpeg',
+    '/images/works/attachment-1.jpeg',
+    '/images/works/attachment-2.jpeg',
+    '/images/works/attachment-3.jpeg',
+    '/images/works/attachment-4.jpeg',
+    '/images/works/attachment-5.jpeg',
+    '/images/works/attachment-6.jpeg',
+    '/images/works/attachment-7.jpeg',
+    '/images/works/attachment-8.jpeg',
+    '/images/works/attachment-9.jpeg',
+    '/images/works/attachment-10.jpeg',
+    '/images/works/attachment-11.jpeg',
   ];
 
   return (
