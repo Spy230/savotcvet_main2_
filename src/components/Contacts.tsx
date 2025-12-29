@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 const Contacts = () => {
   return (
@@ -25,16 +25,28 @@ const Contacts = () => {
                     <Phone className="w-6 h-6 text-red-500" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1">Телефон</h4>
-                    <a
-                      href="tel:+79001234567"
-                      className="text-red-500 hover:text-red-400 transition-colors text-lg"
-                    >
-                      +7 (900) 123-45-67
-                    </a>
-                    <p className="text-gray-400 text-sm mt-1">
-                      Звоните с 9:00 до 21:00
-                    </p>
+                    <h4 className="font-semibold text-white mb-1">Телефоны</h4>
+                    <div className="space-y-1">
+                      <a
+                        href="tel:+79099806800"
+                        className="block text-red-500 hover:text-red-400 transition-colors text-lg"
+                      >
+                        +7 (909) 980-68-00
+                      </a>
+                      <p className="text-gray-400 text-sm">Основной телефон</p>
+                      <a
+                        href="tel:+74993910051"
+                        className="block text-red-500 hover:text-red-400 transition-colors text-lg"
+                      >
+                        +7 (499) 391-00-51
+                      </a>
+                      <a
+                        href="tel:+79253910051"
+                        className="block text-red-500 hover:text-red-400 transition-colors text-lg"
+                      >
+                        +7 (925) 391-00-51
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -44,9 +56,9 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Адрес</h4>
-                    <p className="text-gray-300">г. Москва, ул. Примерная, д. 1</p>
+                    <p className="text-gray-300">Центральный федеральный округ, Москва, Зеленоград, улица Андреевка, 31</p>
                     <a
-                      href="https://yandex.ru/maps"
+                      href="https://yandex.ru/maps/?text=Москва%2C%20Зеленоград%2C%20улица%20Андреевка%2C%2031"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-red-500 hover:text-red-400 transition-colors text-sm inline-block mt-1"
@@ -63,10 +75,10 @@ const Contacts = () => {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
                     <a
-                      href="mailto:info@autoservice.ru"
+                      href="mailto:samotsvett@yandex.ru"
                       className="text-red-500 hover:text-red-400 transition-colors"
                     >
-                      info@autoservice.ru
+                      samotsvett@yandex.ru
                     </a>
                   </div>
                 </div>
@@ -77,8 +89,7 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white mb-1">Режим работы</h4>
-                    <p className="text-gray-300">Пн-Пт: 9:00 - 21:00</p>
-                    <p className="text-gray-300">Сб-Вс: 10:00 - 18:00</p>
+                    <p className="text-gray-300">Ежедневно: 9:00 - 20:00</p>
                   </div>
                 </div>
               </div>
@@ -86,24 +97,26 @@ const Contacts = () => {
 
             <div className="bg-gray-800 p-6 rounded-xl border border-gray-700">
               <h4 className="font-semibold text-white mb-3">
-                Мессенджеры
+                Мессенджеры и соцсети
               </h4>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <a
-                  href="https://wa.me/79001234567"
+                  href="https://wa.me/79253910051"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-red-500 hover:text-red-400 transition-colors"
+                  className="flex items-center space-x-3 text-red-500 hover:text-red-400 transition-colors"
                 >
-                  WhatsApp: +7 (900) 123-45-67
+                  <MessageCircle className="w-5 h-5" />
+                  <span>WhatsApp: +7 (925) 391-00-51</span>
                 </a>
                 <a
-                  href="https://t.me/autoservice"
+                  href="https://vk.com/club77881857"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-red-500 hover:text-red-400 transition-colors"
+                  className="flex items-center space-x-3 text-red-500 hover:text-red-400 transition-colors"
                 >
-                  Telegram: @autoservice
+                  <MessageCircle className="w-5 h-5" />
+                  <span>ВК группа: club77881857</span>
                 </a>
               </div>
             </div>
@@ -111,11 +124,11 @@ const Contacts = () => {
 
           <div className="h-96 lg:h-full min-h-[400px] bg-gray-200 rounded-xl overflow-hidden">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f5b67b3c8f8e35f8c7e9a8e7b5c4d3e2f1a0b9c&amp;source=constructor"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff7b8c9d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b&amp;source=constructor&amp;ll=37.2153%2C55.9969&amp;z=16&amp;pt=37.2153%2C55.9969"
               width="100%"
               height="100%"
               frameBorder="0"
-              title="Карта проезда"
+              title="Карта проезда - Зеленоград, ул. Андреевка, 31"
               className="w-full h-full"
             ></iframe>
           </div>

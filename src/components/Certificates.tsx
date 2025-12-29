@@ -1,26 +1,50 @@
-import { Award, FileText, ShieldCheck } from 'lucide-react';
+import { useState, useCallback } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Award, FileText, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import Lightbox from './Lightbox';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Certificates = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
   const certificates = [
-    {
-      id: 1,
-      title: 'Сертификат качества ISO 9001',
-      image: 'https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Международный сертификат качества',
-    },
-    {
-      id: 2,
-      title: 'Лицензия на ремонт',
-      image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Лицензия на осуществление деятельности',
-    },
-    {
-      id: 3,
-      title: 'Сертификат производителя',
-      image: 'https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Авторизованный сервисный центр',
-    },
+    { id: 1, src: '/images/works/image_2025-12-29_19-25-29.png', alt: 'Сертификат 1' },
+    { id: 2, src: '/images/works/image_2025-12-29_19-25-43.png', alt: 'Сертификат 2' },
+    { id: 3, src: '/images/works/image_2025-12-29_19-26-00.png', alt: 'Сертификат 3' },
+    { id: 4, src: '/images/works/image_2025-12-29_19-26-05.png', alt: 'Сертификат 4' },
+    { id: 5, src: '/images/works/image_2025-12-29_19-26-15.png', alt: 'Сертификат 5' },
+    { id: 6, src: '/images/works/image_2025-12-29_19-26-20.png', alt: 'Сертификат 6' },
+    { id: 7, src: '/images/works/image_2025-12-29_19-26-25.png', alt: 'Сертификат 7' },
+    { id: 8, src: '/images/works/image_2025-12-29_19-26-31.png', alt: 'Сертификат 8' },
+    { id: 9, src: '/images/works/image_2025-12-29_19-26-37.png', alt: 'Сертификат 9' },
   ];
+
+  const handleImageClick = useCallback((imageIndex: number) => {
+    setCurrentImageIndex(imageIndex);
+    setLightboxOpen(true);
+  }, []);
+
+  const handleLightboxClose = useCallback(() => {
+    setLightboxOpen(false);
+  }, []);
+
+  const handleLightboxNext = useCallback(() => {
+    setCurrentImageIndex((prev) => 
+      prev === certificates.length - 1 ? 0 : prev + 1
+    );
+  }, [certificates.length]);
+
+  const handleLightboxPrev = useCallback(() => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? certificates.length - 1 : prev - 1
+    );
+  }, [certificates.length]);
 
   return (
     <section id="certificates" className="py-16 sm:py-24 bg-gray-900">
@@ -66,27 +90,67 @@ const Certificates = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {certificates.map((cert) => (
-            <div
-              key={cert.id}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-700"
-            >
-              <img
-                src={cert.image}
-                alt={cert.title}
-                loading="lazy"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {cert.title}
-                </h3>
-                <p className="text-gray-400 text-sm">{cert.description}</p>
-              </div>
-            </div>
-          ))}
+        {/* Карусель сертификатов */}
+        <div className="relative px-12">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            pagination={{
+              clickable: true,
+              bulletClass: 'swiper-pagination-bullet-custom',
+              bulletActiveClass: 'swiper-pagination-bullet-active-custom',
+            }}
+            navigation={{
+              prevEl: '.swiper-button-prev-certificates',
+              nextEl: '.swiper-button-next-certificates',
+            }}
+            className="certificates-swiper"
+          >
+            {certificates.map((cert, index) => (
+              <SwiperSlide key={cert.id}>
+                <div 
+                  className="max-w-lg mx-auto aspect-[3/4] overflow-hidden rounded-lg cursor-pointer group shadow-xl"
+                  onClick={() => handleImageClick(index)}
+                >
+                  <img
+                    src={cert.src}
+                    alt={cert.alt}
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Кастомные кнопки навигации */}
+          <button 
+            className="swiper-button-prev-certificates absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-red-600 rounded-full shadow-lg flex items-center justify-center hover:bg-red-700 transition-colors duration-200"
+            aria-label="Предыдущий сертификат"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+          
+          <button 
+            className="swiper-button-next-certificates absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-red-600 rounded-full shadow-lg flex items-center justify-center hover:bg-red-700 transition-colors duration-200"
+            aria-label="Следующий сертификат"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
         </div>
+
+        {/* Lightbox для полноэкранного просмотра */}
+        <Lightbox
+          images={certificates}
+          currentIndex={currentImageIndex}
+          isOpen={lightboxOpen}
+          onClose={handleLightboxClose}
+          onNext={handleLightboxNext}
+          onPrev={handleLightboxPrev}
+        />
       </div>
     </section>
   );

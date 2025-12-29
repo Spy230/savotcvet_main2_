@@ -17,7 +17,7 @@ const Lightbox = ({
   onClose,
   onNext,
   onPrev,
-}) => {
+}: LightboxProps) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;

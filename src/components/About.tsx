@@ -16,10 +16,20 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-              src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Наш автосервис"
+              src="/images/works/photo_2025-12-25_13-09-14.jpg"
+              alt="Наш автосервис - мастер рядом с автомобилем"
               loading="lazy"
               className="rounded-xl shadow-lg w-full border border-gray-700"
+              onLoad={() => {
+                console.log('✅ Изображение photo_2025-12-25_13-09-14.jpg загружено успешно!');
+              }}
+              onError={(e) => {
+                console.error('❌ Ошибка загрузки изображения photo_2025-12-25_13-09-14.jpg');
+                console.log('Пробуем fallback изображение...');
+                // Fallback на одно из доступных изображений
+                const target = e.target as HTMLImageElement;
+                target.src = '/images/works/attachment-0.jpeg';
+              }}
             />
           </div>
           <div className="space-y-6">

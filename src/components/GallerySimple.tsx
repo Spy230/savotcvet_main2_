@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import Lightbox from './Lightbox';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const GallerySimple = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const workImages = [
     '/images/works/attachment-0.jpeg',
     '/images/works/attachment-1.jpeg',
@@ -20,6 +24,34 @@ const GallerySimple = () => {
     '/images/works/attachment-10.jpeg',
     '/images/works/attachment-11.jpeg',
   ];
+
+  // Преобразуем массив строк в массив объектов для лайтбокса
+  const lightboxImages = workImages.map((src, index) => ({
+    id: index + 1,
+    src,
+    alt: `Работа ${index + 1}`
+  }));
+
+  const handleImageClick = useCallback((imageIndex: number) => {
+    setCurrentImageIndex(imageIndex);
+    setLightboxOpen(true);
+  }, []);
+
+  const handleLightboxClose = useCallback(() => {
+    setLightboxOpen(false);
+  }, []);
+
+  const handleLightboxNext = useCallback(() => {
+    setCurrentImageIndex((prev) => 
+      prev === workImages.length - 1 ? 0 : prev + 1
+    );
+  }, [workImages.length]);
+
+  const handleLightboxPrev = useCallback(() => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? workImages.length - 1 : prev - 1
+    );
+  }, [workImages.length]);
 
   return (
     <section id="gallery" className="py-16 bg-gray-800">
@@ -57,7 +89,10 @@ const GallerySimple = () => {
           >
             {workImages.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden">
+                <div 
+                  className="aspect-square bg-gray-700 rounded-lg overflow-hidden cursor-pointer group"
+                  onClick={() => handleImageClick(index)}
+                >
                   <img
                     src={image}
                     alt={`Работа ${index + 1}`}
@@ -69,6 +104,16 @@ const GallerySimple = () => {
             ))}
           </Swiper>
         </div>
+
+        {/* Lightbox */}
+        <Lightbox
+          images={lightboxImages}
+          currentIndex={currentImageIndex}
+          isOpen={lightboxOpen}
+          onClose={handleLightboxClose}
+          onNext={handleLightboxNext}
+          onPrev={handleLightboxPrev}
+        />
       </div>
     </section>
   );
