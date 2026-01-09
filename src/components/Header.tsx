@@ -19,9 +19,16 @@ const Header = () => {
           <div className="flex items-center">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-xl sm:text-2xl font-bold text-white hover:text-red-500 transition-colors"
+              className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
             >
-              АвтоСервис
+              <img 
+                src="/logo.jpg" 
+                alt="Samocvet Логотип" 
+                className="h-10 w-10 rounded-full object-cover"
+              />
+              <span className="text-xl sm:text-2xl font-bold text-white hover:text-red-500 transition-colors">
+                Samocvet
+              </span>
             </button>
           </div>
 

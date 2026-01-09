@@ -13,9 +13,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">АвтоСервис</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/logo.jpg" 
+                alt="Samocvet Логотип" 
+                className="h-12 w-12 rounded-full object-cover"
+              />
+              <h3 className="text-xl font-bold">Samocvet</h3>
+            </div>
             <p className="text-gray-400 text-sm">
-              Профессиональный ремонт и обслуживание автомобилей с 2014 года
+              Профессиональный автосервис с 2014 года. Качественный ремонт и обслуживание автомобилей.
             </p>
           </div>
 
@@ -91,7 +98,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} АвтоСервис. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} Samocvet. Все права защищены.</p>
         </div>
       </div>
     </footer>
