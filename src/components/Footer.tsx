@@ -15,11 +15,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/logo.jpg" 
-                alt="Samocvet Логотип" 
-                className="h-12 w-12 rounded-full object-cover"
+                src="/spy230.github.io/images/works/samotcvet.jpg"
+                alt="Самоцвет Логотип" 
+                className="h-10 w-10 rounded-full object-cover border-2 border-red-600 bg-white"
               />
-              <h3 className="text-xl font-bold">Samocvet</h3>
+              <h3 className="text-xl font-bold">Самоцвет</h3>
             </div>
             <p className="text-gray-400 text-sm">
               Профессиональный автосервис с 2014 года. Качественный ремонт и обслуживание автомобилей.
@@ -63,25 +63,50 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Контакты</h4>
+            <h4 className="text-lg font-semibold mb-4">Телефоны</h4>
             <div className="space-y-3">
+              <div>
+                <p className="text-xs text-gray-500 mb-1">Основной телефон</p>
+                <a
+                  href="tel:+79099806800"
+                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  <Phone size={16} />
+                  <span>+7 (909) 980-68-00</span>
+                </a>
+              </div>
+              <div className="space-y-1">
+                <a
+                  href="tel:+74993910051"
+                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  <Phone size={16} />
+                  <span>+7 (499) 391-00-51</span>
+                </a>
+                <a
+                  href="tel:+79253910051"
+                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  <Phone size={16} />
+                  <span>+7 (925) 391-00-51</span>
+                </a>
+              </div>
               <a
-                href="tel:+79001234567"
-                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                <Phone size={16} />
-                <span>+7 (900) 123-45-67</span>
-              </a>
-              <a
-                href="mailto:info@autoservice.ru"
+                href="mailto:samotsvett@yandex.ru"
                 className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
               >
                 <Mail size={16} />
-                <span>info@autoservice.ru</span>
+                <span>samotsvett@yandex.ru</span>
               </a>
               <div className="flex items-start space-x-2 text-gray-400 text-sm">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>г. Москва, ул. Примерная, д. 1</span>
+                <div>
+                  <p>Москва, Зеленоград,</p>
+                  <p>улица Андреевка, 31</p>
+                  <a href="#" className="text-red-500 hover:text-red-400 transition-colors">
+                    Открыть на карте →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -89,16 +114,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Режим работы</h4>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>Понедельник - Пятница</p>
-              <p className="text-white">9:00 - 21:00</p>
-              <p className="mt-3">Суббота - Воскресенье</p>
-              <p className="text-white">10:00 - 18:00</p>
+              <p className="text-white font-medium">Ежедневно: 9:00 - 20:00</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Samocvet. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} Самоцвет. Все права защищены.</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Lightbox from './Lightbox';
@@ -10,19 +10,21 @@ const GallerySimple = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Используем правильный базовый путь для GitHub Pages
+  const basePath = '/spy230.github.io/';
   const workImages = [
-    '/images/works/attachment-0.jpeg',
-    '/images/works/attachment-1.jpeg',
-    '/images/works/attachment-2.jpeg',
-    '/images/works/attachment-3.jpeg',
-    '/images/works/attachment-4.jpeg',
-    '/images/works/attachment-5.jpeg',
-    '/images/works/attachment-6.jpeg',
-    '/images/works/attachment-7.jpeg',
-    '/images/works/attachment-8.jpeg',
-    '/images/works/attachment-9.jpeg',
-    '/images/works/attachment-10.jpeg',
-    '/images/works/attachment-11.jpeg',
+    `${basePath}images/works/attachment-0.jpeg`,
+    `${basePath}images/works/attachment-1.jpeg`,
+    `${basePath}images/works/attachment-2.jpeg`,
+    `${basePath}images/works/attachment-3.jpeg`,
+    `${basePath}images/works/attachment-4.jpeg`,
+    `${basePath}images/works/attachment-5.jpeg`,
+    `${basePath}images/works/attachment-6.jpeg`,
+    `${basePath}images/works/attachment-7.jpeg`,
+    `${basePath}images/works/attachment-8.jpeg`,
+    `${basePath}images/works/attachment-9.jpeg`,
+    `${basePath}images/works/attachment-10.jpeg`,
+    `${basePath}images/works/attachment-11.jpeg`,
   ];
 
   // Преобразуем массив строк в массив объектов для лайтбокса

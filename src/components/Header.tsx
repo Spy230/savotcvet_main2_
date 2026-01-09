@@ -21,14 +21,21 @@ const Header = () => {
               onClick={() => scrollToSection('hero')}
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
             >
-              <img 
-                src="/images/works/samotcvet.jpg" 
-                alt="Samocvet Логотип" 
-                className="h-10 w-10 rounded-full object-cover"
-              />
-              <span className="text-xl sm:text-2xl font-bold text-white hover:text-red-500 transition-colors">
-                Samocvet
-              </span>
+              <div className="relative">
+                <img 
+                  src="/spy230.github.io/images/works/samotcvet.jpg"
+                  alt="Самоцвет Логотип" 
+                  className="h-12 w-12 rounded-full object-contain bg-white border-2 border-red-600 p-1"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg sm:text-xl font-bold text-white hover:text-red-500 transition-colors">
+                  Самоцвет
+                </span>
+                <span className="text-xs text-gray-400 -mt-1">
+                  Автосервис
+                </span>
+              </div>
             </button>
           </div>
 
@@ -52,6 +59,12 @@ const Header = () => {
               Сертификаты
             </button>
             <button
+              onClick={() => scrollToSection('reviews')}
+              className="text-gray-300 hover:text-red-500 transition-colors font-medium"
+            >
+              Отзывы
+            </button>
+            <button
               onClick={() => scrollToSection('about')}
               className="text-gray-300 hover:text-red-500 transition-colors font-medium"
             >
@@ -66,11 +79,11 @@ const Header = () => {
           </nav>
 
           <a
-            href="tel:+79001234567"
+            href="tel:+79099806800"
             className="hidden md:flex items-center space-x-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
           >
             <Phone size={18} />
-            <span className="font-semibold">+7 (900) 123-45-67</span>
+            <span className="font-semibold">+7 (909) 980-68-00</span>
           </a>
 
           <button
@@ -105,6 +118,12 @@ const Header = () => {
               Сертификаты
             </button>
             <button
+              onClick={() => scrollToSection('reviews')}
+              className="block w-full text-left py-2 text-gray-300 hover:text-red-500 transition-colors font-medium"
+            >
+              Отзывы
+            </button>
+            <button
               onClick={() => scrollToSection('about')}
               className="block w-full text-left py-2 text-gray-300 hover:text-red-500 transition-colors font-medium"
             >
@@ -117,11 +136,11 @@ const Header = () => {
               Контакты
             </button>
             <a
-              href="tel:+79001234567"
+              href="tel:+79099806800"
               className="flex items-center justify-center space-x-2 bg-red-600 text-white px-4 py-3 rounded-lg hover:bg-red-700 transition-colors mt-4"
             >
               <Phone size={18} />
-              <span className="font-semibold">+7 (900) 123-45-67</span>
+              <span className="font-semibold">+7 (909) 980-68-00</span>
             </a>
           </nav>
         </div>

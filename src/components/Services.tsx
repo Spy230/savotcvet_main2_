@@ -1,4 +1,4 @@
-import { Wrench, Search, Settings, PaintBucket, Cog, ChevronDown, ChevronUp, Disc, Car, Zap, Thermometer, Wind } from 'lucide-react';
+import { Wrench, Search, Settings, PaintBucket, Cog, ChevronDown, ChevronUp, Disc } from 'lucide-react';
 import { useState } from 'react';
 
 const Services = () => {

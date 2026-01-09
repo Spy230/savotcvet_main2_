@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            О компании Samocvet
+            О компании Самоцвет
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Профессиональный подход к обслуживанию вашего автомобиля
@@ -14,11 +14,11 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
+          <div className="lg:col-span-1">
             <img
-              src="/images/works/photo_2025-12-25_13-09-14.jpg"
+              src="/spy230.github.io/images/works/photo_2025-12-25_13-09-14.jpg"
               alt="Наш автосервис - мастер рядом с автомобилем"
-              loading="lazy"
+              loading="eager"
               className="rounded-xl shadow-lg w-full border border-gray-700"
               onLoad={() => {
                 console.log('✅ Изображение photo_2025-12-25_13-09-14.jpg загружено успешно!');
@@ -28,7 +28,10 @@ const About = () => {
                 console.log('Пробуем fallback изображение...');
                 // Fallback на одно из доступных изображений
                 const target = e.target as HTMLImageElement;
-                target.src = '/images/works/attachment-0.jpeg';
+                target.src = '/spy230.github.io/images/works/samotcvet.jpg';
+                target.onerror = () => {
+                  target.src = '/spy230.github.io/images/works/attachment-0.jpeg';
+                };
               }}
             />
           </div>
@@ -37,7 +40,7 @@ const About = () => {
               Более 10 лет на рынке автосервисных услуг
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              Автосервис "Samocvet" специализируется на комплексном техническом обслуживании
+              Автосервис "Самоцвет" специализируется на комплексном техническом обслуживании
               и ремонте автомобилей всех марок. Мы используем современное
               диагностическое оборудование и оригинальные запчасти, что гарантирует
               высокое качество выполненных работ.

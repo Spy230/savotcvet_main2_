@@ -13,16 +13,18 @@ const Certificates = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
+  // Используем правильный базовый путь для GitHub Pages
+  const basePath = '/spy230.github.io/';
   const certificates = [
-    { id: 1, src: '/images/works/image_2025-12-29_19-25-29.png', alt: 'Сертификат 1' },
-    { id: 2, src: '/images/works/image_2025-12-29_19-25-43.png', alt: 'Сертификат 2' },
-    { id: 3, src: '/images/works/image_2025-12-29_19-26-00.png', alt: 'Сертификат 3' },
-    { id: 4, src: '/images/works/image_2025-12-29_19-26-05.png', alt: 'Сертификат 4' },
-    { id: 5, src: '/images/works/image_2025-12-29_19-26-15.png', alt: 'Сертификат 5' },
-    { id: 6, src: '/images/works/image_2025-12-29_19-26-20.png', alt: 'Сертификат 6' },
-    { id: 7, src: '/images/works/image_2025-12-29_19-26-25.png', alt: 'Сертификат 7' },
-    { id: 8, src: '/images/works/image_2025-12-29_19-26-31.png', alt: 'Сертификат 8' },
-    { id: 9, src: '/images/works/image_2025-12-29_19-26-37.png', alt: 'Сертификат 9' },
+    { id: 1, src: `${basePath}images/works/image_2025-12-29_19-25-29.png`, alt: 'Сертификат 1' },
+    { id: 2, src: `${basePath}images/works/image_2025-12-29_19-25-43.png`, alt: 'Сертификат 2' },
+    { id: 3, src: `${basePath}images/works/image_2025-12-29_19-26-00.png`, alt: 'Сертификат 3' },
+    { id: 4, src: `${basePath}images/works/image_2025-12-29_19-26-05.png`, alt: 'Сертификат 4' },
+    { id: 5, src: `${basePath}images/works/image_2025-12-29_19-26-15.png`, alt: 'Сертификат 5' },
+    { id: 6, src: `${basePath}images/works/image_2025-12-29_19-26-20.png`, alt: 'Сертификат 6' },
+    { id: 7, src: `${basePath}images/works/image_2025-12-29_19-26-25.png`, alt: 'Сертификат 7' },
+    { id: 8, src: `${basePath}images/works/image_2025-12-29_19-26-31.png`, alt: 'Сертификат 8' },
+    { id: 9, src: `${basePath}images/works/image_2025-12-29_19-26-37.png`, alt: 'Сертификат 9' },
   ];
 
   const handleImageClick = useCallback((imageIndex: number) => {
