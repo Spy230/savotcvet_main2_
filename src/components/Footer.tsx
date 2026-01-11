@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/spy230.github.io/images/works/samotcvet.jpg"
+                src="/images/works/samotcvet.jpg"
                 alt="Автосервис Самоцвет - ремонт авто в Зеленограде, техобслуживание автомобиля, автосервис Москва" 
                 className="h-10 w-10 rounded-full object-cover border-2 border-red-600 bg-white"
               />

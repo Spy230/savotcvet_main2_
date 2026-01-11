@@ -14,7 +14,7 @@ const Certificates = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   // Используем правильный базовый путь для GitHub Pages
-  const basePath = '/spy230.github.io/';
+  const basePath = '/';
   const certificates = [
     { id: 1, src: `${basePath}images/works/image_2025-12-29_19-25-29.png`, alt: 'Сертификат 1' },
     { id: 2, src: `${basePath}images/works/image_2025-12-29_19-25-43.png`, alt: 'Сертификат 2' },

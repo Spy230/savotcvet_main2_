@@ -16,7 +16,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="lg:col-span-1">
             <img
-              src="/spy230.github.io/images/works/photo_2025-12-25_13-09-14.jpg"
+              src="/images/works/photo_2025-12-25_13-09-14.jpg"
               alt="Автосервис Зеленоград - ремонт и обслуживание авто, техобслуживание автомобиля, автотехцентр Самоцвет, где починить авто, автосервис рядом со мной"
               loading="eager"
               className="rounded-xl shadow-lg w-full border border-gray-700"
@@ -28,9 +28,9 @@ const About = () => {
                 console.log('Пробуем fallback изображение...');
                 // Fallback на одно из доступных изображений
                 const target = e.target as HTMLImageElement;
-                target.src = '/spy230.github.io/images/works/samotcvet.jpg';
+                target.src = '/images/works/samotcvet.jpg';
                 target.onerror = () => {
-                  target.src = '/spy230.github.io/images/works/attachment-0.jpeg';
+                  target.src = '/images/works/attachment-0.jpeg';
                 };
               }}
             />

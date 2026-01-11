@@ -9,8 +9,8 @@ export interface WorkImage {
 
 // Функция для получения правильного базового пути
 export const getBasePath = (): string => {
-  // В production используем базовый путь из vite.config.ts
-  return import.meta.env.PROD ? '/spy230.github.io/' : '/';
+  // Используем базовый путь из vite.config.ts
+  return '/';
 };
 
 // Функция для генерации полного пути к изображению
