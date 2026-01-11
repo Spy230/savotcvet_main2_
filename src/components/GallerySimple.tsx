@@ -60,10 +60,10 @@ const GallerySimple = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Наши работы - ремонт авто в Зеленограде
+            Наши работы
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Примеры выполненных работ по ремонту и обслуживанию авто, техобслуживанию автомобиля в автосервисе Зеленоград и Андреевка
+            Примеры выполненных работ нашими специалистами
           </p>
         </div>
         

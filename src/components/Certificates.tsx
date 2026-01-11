@@ -53,41 +53,41 @@ const Certificates = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Сертификаты автосервиса и лицензии
+            Сертификаты и лицензии
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Автотехцентр Самоцвет - сертифицированный автосервис для ремонта и обслуживания авто в Зеленограде и Андреевке
+            Наша деятельность подтверждена необходимыми документами и сертификатами
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           <div className="bg-red-900 bg-opacity-30 p-6 rounded-xl text-center border border-red-600">
-            <ShieldCheck className="w-12 h-12 text-red-500 mx-auto mb-4" aria-label="Гарантия качества ремонта авто" />
+            <ShieldCheck className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-white mb-2">
-              Гарантия качества ремонта
+              Гарантия качества
             </h3>
             <p className="text-gray-300 text-sm">
-              Все работы по ремонту и обслуживанию авто выполняются с гарантией
+              Все работы выполняются с соблюдением стандартов качества
             </p>
           </div>
 
           <div className="bg-red-900 bg-opacity-30 p-6 rounded-xl text-center border border-red-600">
-            <Award className="w-12 h-12 text-red-500 mx-auto mb-4" aria-label="Сертифицированный автотехцентр" />
+            <Award className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-white mb-2">
-              Сертифицированный автотехцентр
+              Сертифицированные мастера
             </h3>
             <p className="text-gray-300 text-sm">
-              Автосервис для ремонта двигателя - специалисты проходят обучение
+              Наши специалисты регулярно проходят обучение и аттестацию
             </p>
           </div>
 
           <div className="bg-red-900 bg-opacity-30 p-6 rounded-xl text-center border border-red-600">
-            <FileText className="w-12 h-12 text-red-500 mx-auto mb-4" aria-label="Официальный автосервис" />
+            <FileText className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-white mb-2">
-              Официальный автосервис
+              Официальная деятельность
             </h3>
             <p className="text-gray-300 text-sm">
-              Автосервис Москва - работаем с полным пакетом документов
+              Работаем с полным пакетом разрешительных документов
             </p>
           </div>
         </div>

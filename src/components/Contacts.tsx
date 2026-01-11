@@ -6,10 +6,10 @@ const Contacts = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Контакты автосервиса - где ближайший автосервис
+            Контакты
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Автосервис рядом со мной в Зеленограде и Андреевке. Автосервис на карте - автосервис открытый сейчас. Как починить машину в Москве - приезжайте к нам!
+            Свяжитесь с нами удобным способом или приезжайте по адресу
           </p>
         </div>
 
@@ -23,7 +23,7 @@ const Contacts = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white mb-2">
-                    Телефоны автосервиса
+                    Телефоны
                   </h3>
                   <div className="space-y-2">
                     <a
@@ -56,7 +56,7 @@ const Contacts = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white mb-2">
-                    Адрес автосервиса - автосервис на карте
+                    Адрес
                   </h3>
                   <p className="text-gray-300 mb-3">
                     Москва, Зеленоград, улица Андреевка, 31
@@ -81,7 +81,7 @@ const Contacts = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white mb-2">
-                    Режим работы - автосервис открытый сейчас
+                    Режим работы
                   </h3>
                   <p className="text-gray-300">
                     Ежедневно: 9:00 - 20:00
@@ -127,47 +127,14 @@ const Contacts = () => {
           </div>
         </div>
 
-        {/* Дополнительная информация */}
-        <div className="mt-12 bg-gray-900 p-8 rounded-xl border border-gray-700">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            Как добраться до автосервиса в Зеленограде
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="bg-red-900 bg-opacity-30 p-4 rounded-lg mb-3">
-                <p className="text-white font-semibold">На автомобиле</p>
-              </div>
-              <p className="text-gray-300 text-sm">
-                Удобный подъезд с улицы Андреевка. Бесплатная парковка для клиентов автосервиса.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-red-900 bg-opacity-30 p-4 rounded-lg mb-3">
-                <p className="text-white font-semibold">Общественный транспорт</p>
-              </div>
-              <p className="text-gray-300 text-sm">
-                Остановка "Андреевка" - автобусы и маршрутки из Зеленограда. Автосервис рядом со мной.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-red-900 bg-opacity-30 p-4 rounded-lg mb-3">
-                <p className="text-white font-semibold">Из Москвы</p>
-              </div>
-              <p className="text-gray-300 text-sm">
-                По Ленинградскому шоссе до Зеленограда, далее по указателям на Андреевку. Автосервис Москва.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Призыв к действию */}
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
-            Где починить авто в Зеленограде? Приезжайте к нам!
+            Приезжайте к нам!
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Автосервис рядом со мной - автотехцентр Самоцвет. Ремонт и обслуживание авто, техобслуживание автомобиля, 
-            диагностика машины рядом, шиномонтаж рядом со мной. Сколько стоит ТО в автосервисе - звоните!
+            Мы находимся в Зеленограде на улице Андреевка, 31. Работаем ежедневно с 9:00 до 20:00.
+            Звоните для записи или консультации!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
