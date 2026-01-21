@@ -14,15 +14,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/spy230.github.io/images/works/samotcvet.jpg"
-                alt="Самоцвет Логотип" 
-                className="h-10 w-10 rounded-full object-cover border-2 border-red-600 bg-white"
-              />
-              <h3 className="text-xl font-bold">Самоцвет</h3>
+              <div className="h-10 w-10 rounded-full bg-white border-2 border-red-600 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/spy230.github.io/images/works/samotcvet.jpg"
+                  alt="Самоцвет Логотип" 
+                  className="h-8 w-8 object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="text-xl font-bold">Самоцвет</h3>
+                <span className="text-sm text-white font-normal tracking-wide">АвтоТехЦентр</span>
+              </div>
             </div>
             <p className="text-gray-400 text-sm">
-              Профессиональный автосервис с 2014 года. Качественный ремонт и обслуживание автомобилей.
+              Профессиональный АвтоТехЦентр с 2014 года. Качественный ремонт и обслуживание автомобилей.
             </p>
           </div>
 
@@ -92,11 +97,11 @@ const Footer = () => {
                 </a>
               </div>
               <a
-                href="mailto:samotsvett@yandex.ru"
+                href="mailto:samotsvet1@mail.ru"
                 className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
               >
                 <Mail size={16} />
-                <span>samotsvett@yandex.ru</span>
+                <span>samotsvet1@mail.ru</span>
               </a>
               <div className="flex items-start space-x-2 text-gray-400 text-sm">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />

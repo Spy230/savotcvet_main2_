@@ -96,6 +96,48 @@ export const generateWorkImages = (): WorkImage[] => {
       src: `${basePath}images/works/attachment-11.jpeg`,
       alt: 'Работа 12',
       thumbnail: `${basePath}images/works/attachment-11.jpeg`
+    },
+    {
+      id: 13,
+      src: `${basePath}images/works/IMG_6651.jpg`,
+      alt: 'Работа 13',
+      thumbnail: `${basePath}images/works/IMG_6651.jpg`
+    },
+    {
+      id: 14,
+      src: `${basePath}images/works/IMG_6653.jpg`,
+      alt: 'Работа 14',
+      thumbnail: `${basePath}images/works/IMG_6653.jpg`
+    },
+    {
+      id: 15,
+      src: `${basePath}images/works/IMG_6656.jpg`,
+      alt: 'Работа 15',
+      thumbnail: `${basePath}images/works/IMG_6656.jpg`
+    },
+    {
+      id: 16,
+      src: `${basePath}images/works/IMG_6657.jpg`,
+      alt: 'Работа 16',
+      thumbnail: `${basePath}images/works/IMG_6657.jpg`
+    },
+    {
+      id: 17,
+      src: `${basePath}images/works/photo_2025-12-25_13-09-14.jpg`,
+      alt: 'Работа 17',
+      thumbnail: `${basePath}images/works/photo_2025-12-25_13-09-14.jpg`
+    },
+    {
+      id: 18,
+      src: `${basePath}images/works/photo_2026-01-21_18-35-11.jpg`,
+      alt: 'Работа 18',
+      thumbnail: `${basePath}images/works/photo_2026-01-21_18-35-11.jpg`
+    },
+    {
+      id: 19,
+      src: `${basePath}images/works/samotcvet.jpg`,
+      alt: 'Работа 19',
+      thumbnail: `${basePath}images/works/samotcvet.jpg`
     }
   ];
   

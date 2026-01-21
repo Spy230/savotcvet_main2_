@@ -25,6 +25,12 @@ const GallerySimple = () => {
     `${basePath}images/works/attachment-9.jpeg`,
     `${basePath}images/works/attachment-10.jpeg`,
     `${basePath}images/works/attachment-11.jpeg`,
+    `${basePath}images/works/IMG_6651.jpg`,
+    `${basePath}images/works/IMG_6653.jpg`,
+    `${basePath}images/works/IMG_6656.jpg`,
+    `${basePath}images/works/IMG_6657.jpg`,
+    `${basePath}images/works/photo_2025-12-25_13-09-14.jpg`,
+    `${basePath}images/works/photo_2026-01-21_18-35-11.jpg`,
   ];
 
   // Преобразуем массив строк в массив объектов для лайтбокса

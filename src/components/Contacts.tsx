@@ -58,7 +58,7 @@ const Contacts = () => {
                     <h4 className="font-semibold text-white mb-1">Адрес</h4>
                     <p className="text-gray-300">Центральный федеральный округ, Москва, Зеленоград, улица Андреевка, 31</p>
                     <a
-                      href="https://yandex.ru/maps/?text=Москва%2C%20Зеленоград%2C%20улица%20Андреевка%2C%2031"
+                      href="https://yandex.ru/maps/-/CLdTZNy5"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-red-500 hover:text-red-400 transition-colors text-sm inline-block mt-1"
@@ -75,10 +75,10 @@ const Contacts = () => {
                   <div>
                     <h4 className="font-semibold text-white mb-1">Email</h4>
                     <a
-                      href="mailto:samotsvett@yandex.ru"
+                      href="mailto:samotsvet1@mail.ru"
                       className="text-red-500 hover:text-red-400 transition-colors"
                     >
-                      samotsvett@yandex.ru
+                      samotsvet1@mail.ru
                     </a>
                   </div>
                 </div>
@@ -124,10 +124,10 @@ const Contacts = () => {
 
           <div className="h-96 lg:h-full min-h-[400px] bg-gray-200 rounded-xl overflow-hidden">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff7b8c9d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b&amp;source=constructor&amp;ll=37.2153%2C55.9969&amp;z=16&amp;pt=37.2153%2C55.9969"
+              src="https://yandex.ru/map-widget/v1/?ll=37.145502%2C55.972903&z=17&l=map&pt=37.145502%2C55.972903%2Cpm2rdm"
               width="100%"
               height="100%"
-              frameBorder="0"
+              style={{ border: 0 }}
               title="Карта проезда - Зеленоград, ул. Андреевка, 31"
               className="w-full h-full"
             ></iframe>

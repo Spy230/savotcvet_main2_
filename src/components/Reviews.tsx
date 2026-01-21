@@ -37,7 +37,7 @@ const Reviews = () => {
         {
             id: 5,
             name: 'Елена Смирнова',
-            text: 'Отличный автосервис! Делали капитальный ремонт коробки передач. Все сроки соблюдены, качество на высоте. Рекомендую!',
+            text: 'Отличный АвтоТехЦентр! Делали капитальный ремонт коробки передач. Все сроки соблюдены, качество на высоте. Рекомендую!',
             avatar: '👩',
             rating: 5,
             date: '20 ноября 2024'
@@ -104,7 +104,7 @@ const Reviews = () => {
 
                 <div className="text-center mt-12">
                     <a
-                        href="https://yandex.ru/maps/org/avtotekhtsentr_samotsvet/1115952380/?ll=37.148226%2C55.972388&z=15"
+                        href="https://yandex.ru/maps/-/CLdTZNy5"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold inline-block"

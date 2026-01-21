@@ -21,19 +21,19 @@ const Header = () => {
               onClick={() => scrollToSection('hero')}
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
             >
-              <div className="relative">
-                <img 
+              <div className="relative h-12 w-12 rounded-full bg-white border-2 border-red-600 flex items-center justify-center overflow-hidden">
+                <img
                   src="/spy230.github.io/images/works/samotcvet.jpg"
-                  alt="Самоцвет Логотип" 
-                  className="h-12 w-12 rounded-full object-contain bg-white border-2 border-red-600 p-1"
+                  alt="Логотип Самоцвет"
+                  className="h-10 w-10 object-contain"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg sm:text-xl font-bold text-white hover:text-red-500 transition-colors">
                   Самоцвет
                 </span>
-                <span className="text-xs text-gray-400 -mt-1">
-                  Автосервис
+                <span className="text-xs sm:text-sm text-white font-normal tracking-wide">
+                  АвтоТехЦентр
                 </span>
               </div>
             </button>
